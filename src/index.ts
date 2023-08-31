@@ -57,7 +57,7 @@ menu.startState({
 
 menu.state('registerMenu', {
   run: async() => {
-    menu.con('Welcome to Dhamana Wallet. To access services, we need you to opt in for services'+
+    menu.con('Welcome to the Gnosis Wallet. To access services, we need you to opt in for services'+
             '\n1. Opt in' +
             '\n2. No thanks');
   },
@@ -115,7 +115,7 @@ menu.state('createUser', {
 
 menu.state('userMenu', {
   run: async ()=>{
-      menu.con('Welcome to the Dhamana Menu' + 
+      menu.con('Welcome to the wallet menu' + 
       '\n1. Send Money' +
       '\n2. My Account' +
       '\n3. Withdraw to Mobile Money'
@@ -186,7 +186,7 @@ menu.state('pin', {
             const receipt:any = sendToken(
               recipientAddress,
               key,
-              0.01,
+              recipientAmount,
               menu.args.phoneNumber,
           )
             menu.end('The transaction is being processed. A notification will be sent')
